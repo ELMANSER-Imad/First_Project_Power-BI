@@ -54,19 +54,6 @@ Vous trouverez ci-dessous une série de tâches permettant de construire progres
   - Déterminer les facteurs clés pour améliorer la performance de l’entreprise (optimisation des plannings, répartition homogène du personnel, etc.).
   - Proposer des recommandations concrètes (p. ex. ajuster le staffing en fonction de la fréquentation, cibler des campagnes pour les clients selon leur statut, etc.).
 
-## Modalités Pédagogiques
-
-- Travail individuel
-- Temporalité : 5 jours
-- Période : Du 23/12/2024 au 27/12/2024 à 17h30
-
-## Modalités d'Évaluation
-
-### Maîtrise de l’Exploration et de la Compréhension des Données
-
-- Sait réaliser un profilage rapide des colonnes et types de données.
-- Identifie efficacement les valeurs manquantes, incohérences et doublons.
-
 ### Compétences en Nettoyage et Préparation
 
 - Utilise Power Query pour gérer les valeurs manquantes (suppression, imputation).
@@ -92,14 +79,4 @@ Vous trouverez ci-dessous une série de tâches permettant de construire progres
 
 - Intègre des slicers et segments pour filtrer l’analyse par période, localisation, etc.
 - Configure efficacement les interactions entre les visuels pour une exploration intuitive.
-
-## Livrables
-
-- Documenter le processus d’analyse (notes sur le nettoyage des données, formules DAX importantes, etc.).
-- Le rapport Power BI (au format .pbix ou via un lien Power BI Service).
-
-## Critères de Performance
-
-- Maîtrise des mesures DAX
-- Maîtrise de Power Query
 
