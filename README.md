@@ -1,82 +1,134 @@
+# First Project Power BI
 
-# First_Project_Power-BI
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Dataset Description](#dataset-description)
+- [Objectives](#objectives)
+- [Setup and Environment](#setup-and-environment)
+- [Data Preparation](#data-preparation)
+- [Data Modeling](#data-modeling)
+- [Visualizations and Insights](#visualizations-and-insights)
+- [Filters and Dynamic Analysis](#filters-and-dynamic-analysis)
+- [Recommendations and Insights](#recommendations-and-insights)
+- [Skills Demonstrated](#skills-demonstrated)
+- [Future Enhancements](#future-enhancements)
 
-## Contexte du Projet
+## Project Overview
+This project involves creating a Power BI solution using three CSV datasets: `clients`, `employees`, and `shifts`. The solution demonstrates the end-to-end data analysis process, including data preparation, modeling, and visualization, to deliver actionable business insights. The goal is to analyze client and employee performance, optimize shift management, and identify key trends to drive operational efficiency.
 
-Vous trouverez ci-dessous une série de tâches permettant de construire progressivement la solution Power BI à partir des trois fichiers CSV. Chaque tâche renforce une étape clé du cycle d’analyse, depuis l’exploration des données jusqu’à l’obtention d’insights concrets.
+## Dataset Description
+### 1. Clients
+- Fields: ID, Name, Gender, Birthdate, Status, ADLs (Activities of Daily Living), etc.
+- Purpose: Analyze demographic trends, track client status changes, and evaluate ADLs.
 
-### Préparation de l’Environnement
+### 2. Employees
+- Fields: ID, Name, Position, Department, Hire Date, Location, etc.
+- Purpose: Evaluate workforce distribution, analyze tenure, and optimize resource allocation.
 
-- Récupérer les fichiers CSV (clients, employees, shifts).
-- Installer Power BI Desktop depuis le site officiel.
-- Ouvrir le fichier .pbix pour explorer la structure du modèle et les exemples de visualisations s’il y en a.
+### 3. Shifts
+- Fields: Shift ID, Employee ID, Start Time, End Time, Location, etc.
+- Purpose: Monitor shift patterns, calculate shift durations, and identify activity peaks.
 
-### Exploration et Compréhension des Données
+## Objectives
+1. Import and clean data from CSV files.
+2. Build a data model by defining relationships between the datasets.
+3. Create insightful visualizations to analyze key metrics for clients, employees, and shifts.
+4. Implement dynamic filtering and interactivity for exploratory data analysis.
+5. Derive actionable recommendations to improve business operations.
 
-- Importer les trois fichiers CSV dans Power BI et réaliser une première exploration (profiling des colonnes, détection des types de données, etc.).
-- Analyser la qualité des données : identifier les valeurs manquantes, les doublons, les incohérences et tout autre problème de qualité.
+## Setup and Environment
+### Prerequisites
+- Software:Power BI Desktop ([Download here](https://powerbi.microsoft.com/desktop/))
+- Files: Ensure the following files are available in the working directory:
+  - `clients.csv`
+  - `employees.csv`
+  - `shifts.csv`
+- **System Requirements:** A computer with sufficient resources to run Power BI Desktop smoothly.
 
-### Nettoyage et Préparation des Données
+### Steps
+1. Download and install Power BI Desktop.
+2. Open the provided `.pbix` file or create a new project to start exploring.
+3. Import the CSV datasets and set up the workspace.
 
-- Nettoyer les données dans Power Query :
-  - Gérer les valeurs manquantes (suppression, imputation, etc.).
-  - Standardiser les formats de date et de texte.
-  - Corriger les erreurs de saisie et autres incohérences.
-  - Créer de nouvelles colonnes au besoin (par exemple, calculer l’âge des clients à partir de la date de naissance ou la durée d’un shift à partir des heures de début/fin).
+## Data Preparation
+### Tasks Performed
+1. Exploration:
+   - Imported all datasets into Power BI.
+   - Conducted data profiling to identify column types, missing values, and anomalies.
 
-### Modélisation des Données
+2. Cleaning:
+   - Addressed missing values through imputation or removal.
+   - Standardized date formats and text fields.
+   - Corrected errors in data entries and ensured consistency.
 
-- Définir les relations entre les tables clients, employees et shifts dans Power BI.
-- Mettre en place des mesures DAX (calculs tels que le nombre total de shifts, la répartition des clients par statut, etc.) pour faciliter l’analyse ultérieure.
+3. Enhancements:
+   - Created calculated columns:
+     - Age of clients based on birthdate.
+     - Duration of shifts from start and end times.
 
-### Transformation et Calculs
+## Data Modeling
+### Relationships Defined
+- Clients and Shifts: Linked via `Client ID`.
+- Employees and Shifts: Linked via `Employee ID`.
 
-- Mettre en œuvre des transformations plus poussées (regroupements, filtres, agrégations) dans Power Query ou via DAX.
-- Créer des mesures spécifiques pour identifier des tendances (nombre moyen de shifts par employé, évolution du statut des clients dans le temps, etc.).
+### Measures Created
+- Total Shifts: Count of all shifts.
+- Average Shift Duration: Average time duration of all shifts.
+- Client Status Distribution: Percentage breakdown of client statuses.
 
-### Conception et Création des Visualisations
+## Visualizations and Insights
+### Key Dashboards
+1. Clients Dashboard:
+   - Gender distribution.
+   - Trend analysis of admissions.
+   - Impact of ADLs on client status.
 
-- Concevoir des tableaux de bord et rapports pour chaque jeu de données :
-  - Clients : Graphiques illustrant la répartition par genre, l’évolution des admissions, l’impact des ADLs, etc.
-  - Employees : Visualisations sur la répartition des postes, l’ancienneté, la localisation, etc.
-  - Shifts : Graphiques de la durée moyenne des shifts, du taux de pointage à l’heure, etc.
-- Personnaliser les visuels (couleurs, formats, styles) afin de rendre le tableau de bord ergonomique et agréable.
+2. Employees Dashboard:
+   - Workforce distribution by department.
+   - Tenure analysis.
+   - Location-based performance metrics.
 
-### Mise en Place de Filtres Dynamiques
+3. Shifts Dashboard:
+   - Average shift duration.
+   - Punctuality trends.
+   - Peak activity periods.
 
-- Ajouter des slicers et des segments de données permettant de filtrer l’analyse (par période, par localisation, par département, etc.).
-- Configurer des interactions entre les visuels pour permettre une analyse exploratoire plus approfondie.
+### Customizations
+- Applied consistent color schemes for better readability.
+- Used appropriate chart types for different metrics (e.g., bar charts, pie charts, line graphs).
 
-### Insights et Recommandations
+## Filters and Dynamic Analysis
+- Integrated slicers for:
+  - Time periods.
+  - Locations.
+  - Departments.
+- Configured interactivity among visualizations for drill-through analysis.
 
-- Interpréter les résultats obtenus :
-  - Identifier les tendances majeures (croissance du nombre de clients, pics d’activité dans les shifts, etc.).
-  - Déterminer les facteurs clés pour améliorer la performance de l’entreprise (optimisation des plannings, répartition homogène du personnel, etc.).
-  - Proposer des recommandations concrètes (p. ex. ajuster le staffing en fonction de la fréquentation, cibler des campagnes pour les clients selon leur statut, etc.).
+## Recommendations and Insights
+1. Staffing Optimization:
+   - Adjust shift schedules based on peak activity hours.
+   - Reallocate resources to underperforming locations.
 
-### Compétences en Nettoyage et Préparation
+2. Client Engagement:
+   - Focus on campaigns targeting clients with specific status patterns.
+   - Enhance ADL programs for better outcomes.
 
-- Utilise Power Query pour gérer les valeurs manquantes (suppression, imputation).
-- Standardise correctement les formats de date/texte et corrige les erreurs.
-- Crée les colonnes calculées pertinentes (âge des clients, durée de shift, etc.).
+3. Operational Efficiency:
+   - Reduce shift overlaps and minimize idle time.
+   - Invest in training programs for departments with high turnover.
 
-### Aptitude à la Modélisation des Données
+## Skills Demonstrated
+1. Data Cleaning:
+   - Handled missing values, standardized data formats, and corrected inconsistencies.
+2. Data Modeling:
+   - Established logical relationships between datasets and implemented DAX measures.
+3. Visualization Design:
+   - Created intuitive dashboards tailored to different audiences.
+4. Dynamic Analysis:
+   - Enabled interactive filtering and drill-through exploration.
 
-- Détermine les relations appropriées entre les tables (clients, employees, shifts).
-- Maîtrise des mesures DAX de base (calcul du total de shifts, répartition par statut, etc.).
-
-### Capacité en Transformation et Calculs Avancés
-
-- Met en œuvre des regroupements, filtres et agrégations complexes.
-- Crée des mesures DAX spécifiques pour dégager des tendances (moyenne de shifts par employé, évolution du statut des clients, etc.).
-
-### Compétences en Conception et Création de Visualisations
-
-- Conçoit des tableaux de bord pertinents et esthétiques pour chaque jeu de données (clients, employees, shifts).
-- Choisit des visuels adaptés, personnalise couleurs et formats pour améliorer la lisibilité.
-
-### Mise en Place de Filtres Dynamiques
-
-- Intègre des slicers et segments pour filtrer l’analyse par période, localisation, etc.
-- Configure efficacement les interactions entre les visuels pour une exploration intuitive.
+## Future Enhancements
+- Incorporate additional datasets (e.g., financial data, customer feedback).
+- Automate data refresh for real-time insights.
+- Develop advanced predictive models using Python or R for deeper analysis.
 
